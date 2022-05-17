@@ -84,8 +84,11 @@
 
 
 //     b) Explique o valor impresso no console. Você sabe por que isso aconteceu?
+
+
 // apontou false porque na const pessoa foi definido que é false então apareceu esse resultado 
-// o undefined apareceu pq "altura " naop foi definido.
+
+// o undefined apareceu pq "altura " nao foi definido.
 
 
 //--------------------------------------------------------------------------------------------------------//
