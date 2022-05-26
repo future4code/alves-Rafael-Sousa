@@ -1,14 +1,17 @@
 /** 
-  *
-  *  ESTILOS GERAIS 
-  *
-  **/
+*
+*  ESTILOS GERAIS 
+*
+**/
 
 * {
     margin: 0;
     padding: 0;
 }
 
+body{
+    font-family: 'Roboto';
+}
 h2 {
     background-color: #fe7e02;
     padding: 10px 5px 10px 5px;
@@ -17,8 +20,11 @@ h2 {
 }
 
 input {
-    height: 20px;
-    width: 500px;
+height: 20px;
+width: 500px;
+border-top: none;
+border-left: none;
+border-right: none;
 }
 
 button:focus {
@@ -32,11 +38,9 @@ img {
 div>p:first-child {
     display: inline;
 }
-
-div img {
-    /* background: black; */
-}
-
+/* div img{
+    background: black;
+} */
 .botao-amarelo {
     background-color: #ffaf43;
     width: 250px;
@@ -93,7 +97,7 @@ div img {
     color: #c44f00;
     padding: 100px 0;
     font-size: 60px;
-
+   display: block;
 }
 
 
@@ -109,9 +113,10 @@ div:last-child {
 }
 
 table {
-    width: 80%;
+    width: 90%;
     height: auto;
-    text-align: right;
+    text-align: center;
+    margin: auto
 }
 
 td button {
@@ -121,7 +126,13 @@ td button {
     border-radius: 5px;
     color: black;
 }
-
+td button:hover{
+    background-color: #dc681a;
+}
+td button:active{
+    background-color: white;
+    color: black
+}
 .container-do-search {
     margin-top: 20px;
     height: 40px;
