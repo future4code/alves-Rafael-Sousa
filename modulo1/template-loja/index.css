@@ -1,0 +1,84 @@
+body{
+    background-color: rgba(9, 9, 9, 0.912);
+}
+header h1{ 
+    background-color: rgb(120, 120, 120);
+box-shadow:0px 0px 20px rgb(9, 1, 255);
+color: rgb(3, 2, 2); 
+height: 39px;
+width: 50%;
+font-size: 38px;
+}
+p{
+    color: rgb(0, 0, 0);
+    background-color: rgb(120, 120, 120);
+    box-shadow: 0px 0px 20px rgb(97, 6, 163);
+    height: 30px;
+    width: 19%;
+    font-size: 18px;
+}
+nav a{
+    background-color: rgb(120, 120, 120);
+    box-shadow:0px 0px 20px rgb(9, 9, 233);
+    color: rgb(3, 2, 2); 
+    height: 40px;
+    width: 20%;
+    text-decoration:none ;
+}
+td{
+    color:rgba(251, 251, 251, 0.766)
+}
+
+h2{
+    color: white
+}
+img{
+    background-color: rgb(94, 3, 191);
+    margin: 10px, 5px, 10px, 5px
+}
+
+
+footer img{
+  
+    background-color: rgba(161, 161, 156, 0.924);
+    box-shadow: 0px 0px 20px rgb(9, 31, 174);
+}
+
+tr td{
+    box-shadow:0px 0px 20px rgba(240, 240, 227, 0.527);
+    color: rgb(205, 9, 9)
+}
+tr th{
+    box-shadow:0px 0px 20px rgb(211, 207, 219);
+    color: rgb(0, 0, 0)
+}
+li{
+    color:rgba(240, 240, 227, 0.527);
+}
+h2{
+color:rgba(150, 206, 9, 0.738)
+}
+form label{
+    color:rgba(149, 165, 5, 0.992);
+    box-shadow:0px 0px 20px rgb(66, 65, 69);
+}
+
+form button{
+    color:rgba(249, 213, 3, 0.983);
+    box-shadow:0px 0px 20px rgb(224, 223, 228);
+    background-color: rgb(6, 6, 6);
+}
+
+main img{
+    margin-top: 5%;
+    margin-bottom: 1%;
+    margin-left: 5%;
+    margin-right: 5%;
+    box-shadow:0px 0px 20px rgb(94, 3, 191);
+}
+footer{
+    height: 30px;
+    width: 70%;
+    font-size: 18px;
+
+}
