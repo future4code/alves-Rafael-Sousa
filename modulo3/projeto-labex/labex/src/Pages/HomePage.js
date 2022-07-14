@@ -14,8 +14,8 @@ import { useNavigate } from "react-router-dom";
     return(
         <div>
                 <h3>LabeX</h3>
-                <button onClick={goListPage}>ver viagens</button>
-                <button onClick={gotoLoginPage}>proxima pagina</button>
+                <button onClick={goListPage}>Viagens</button>
+                <button onClick={gotoLoginPage}>Fazer Login</button>
         </div>
     )
 }

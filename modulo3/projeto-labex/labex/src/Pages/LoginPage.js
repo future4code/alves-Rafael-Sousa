@@ -5,7 +5,7 @@ import {useNavigate} from "react-router-dom"
 export const Login =()=>{
 
     const[email, setEmail]= useState()
-const[password, setpassword]= useState()
+    const[password, setpassword]= useState()
 
 const navigate = useNavigate()
 
@@ -23,14 +23,15 @@ const body = {
     email: email,
     password: password
 }
-const goListPage = navigate("./create")
+
 
 
     axios.post("https://us-central1-labenu-apis.cloudfunctions.net/labeX/:darvas/login", body)
     .then((response)=>{
             console.log("deu certo:",response.data.token)
             localStorage.setItem("token",response.data.token)
-            navigate.push("/")
+            navigate("/")
+            console.log(response.data.token)
     })
     .catch((error)=>{
         console.log("deu errado:",error.response)

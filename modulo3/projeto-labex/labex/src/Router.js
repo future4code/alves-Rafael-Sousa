@@ -1,7 +1,7 @@
 import React from "react"
 import {BrowserRouter, Routes, Route} from "react-router-dom"
 import Home from "./Pages/HomePage"
-import ListTrip from "./Pages/ListTripsPage"
+import {Trip} from "./Pages/ListTripsPage"
 import {Login} from "./Pages/LoginPage"
 import FormPage from "./Pages/ApplicationFormPage"
 import {Create} from "./Pages/CreateTripPage"
@@ -15,7 +15,7 @@ export const Routess = ()=>{
           <BrowserRouter>
                 <Routes>
                     <Route index element={<Home/>}/>
-                    <Route path="trips" element={<ListTrip/>}/>
+                    <Route path="trips" element={<Trip/>}/>
                     <Route path="login" element={  <Login/>}/>
                     <Route path="application" element ={<FormPage/>}/>
                     <Route path="create" element ={<Create/>}/>
