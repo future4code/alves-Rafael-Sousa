@@ -30,7 +30,7 @@ const body = {
     .then((response)=>{
             console.log("deu certo:",response.data.token)
             localStorage.setItem("token",response.data.token)
-            navigate("/")
+            navigate("/admin")
             console.log(response.data.token)
     })
     .catch((error)=>{

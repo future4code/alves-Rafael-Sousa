@@ -6,10 +6,10 @@ import { useNavigate } from "react-router-dom";
 
     
     const gotoLoginPage =()=>{
-        Navigate("./login")
+        Navigate("/login")
     }
     const goListPage =()=>{
-        Navigate("./trips")
+        Navigate("/trips")
     }
     return(
         <div>

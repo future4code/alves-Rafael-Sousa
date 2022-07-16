@@ -6,7 +6,7 @@ import {Login} from "./Pages/LoginPage"
 import FormPage from "./Pages/ApplicationFormPage"
 import {Create} from "./Pages/CreateTripPage"
 import {Details} from "./Pages/TripDetailsPage"
-
+import { Admin } from "./Pages/AdminHomePage"
 
 
 export const Routess = ()=>{
@@ -20,6 +20,7 @@ export const Routess = ()=>{
                     <Route path="application" element ={<FormPage/>}/>
                     <Route path="create" element ={<Create/>}/>
                     <Route path="id" element ={<Details/>}/>
+                    <Route path="admin" element ={<Admin/>}/>
                 </Routes>
           </BrowserRouter>
         </div>
