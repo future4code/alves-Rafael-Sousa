@@ -1,12 +1,12 @@
 import React from "react"
 import {BrowserRouter, Routes, Route} from "react-router-dom"
-import Home from "./Pages/HomePage"
-import {Trip} from "./Pages/ListTripsPage"
-import {Login} from "./Pages/LoginPage"
-import FormPage from "./Pages/ApplicationFormPage"
-import {Create} from "./Pages/CreateTripPage"
-import {Details} from "./Pages/TripDetailsPage"
-import { Admin } from "./Pages/AdminHomePage"
+import Home from "./Pages/home/HomePage"
+import {Trip} from "./Pages/lista/ListTripsPage"
+import {Login} from "./Pages/login/LoginPage"
+import FormPage from "./Pages/interação User/ApplicationFormPage"
+import {Create} from "./Pages/create/CreateTripPage"
+import {Details} from "./Pages/details/TripDetailsPage"
+import { Admin } from "./Pages/admin/AdminHomePage"
 
 
 export const Routess = ()=>{

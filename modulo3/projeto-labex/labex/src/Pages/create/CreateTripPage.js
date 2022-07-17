@@ -3,7 +3,7 @@ import axios from "axios"
 import { useNavigate } from "react-router-dom"
 
 export const Create = ()=>{
-const[viagem, setViagem]= useState({})
+const[viagem, setViagem]= useState([])
 const[date, setDate]= useState()
 const[nome, setNome]= useState()
 const[description, setdescription] = useState()
@@ -33,6 +33,10 @@ const listaDescricao = (e) =>{
   
   const voltarPagina = ()=>{
     navigate("/admin")
+  }
+
+  const paginaViagem =()=>{
+    navigate("/trips")
   }
 
 const onClickCriar =()=>{
@@ -94,6 +98,7 @@ const onClickCriar =()=>{
 
             <button onClick={onClickCriar}>criar viagem</button>
             <button onClick={voltarPagina}> voltar</button>
+            <button onClick={paginaViagem}> lista </button>
               
             <section>
               

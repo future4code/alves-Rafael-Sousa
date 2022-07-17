@@ -1,5 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import * as C from "./styled"
 
  function HomePg(){
     const Navigate = useNavigate()
@@ -13,9 +14,9 @@ import { useNavigate } from "react-router-dom";
     }
     return(
         <div>
-                <h3>LabeX</h3>
-                <button onClick={goListPage}>Viagens</button>
-                <button onClick={gotoLoginPage}>Fazer Login</button>
+                <C.estilo>LabeX</C.estilo>
+                <C.butao onClick={goListPage}>Viagens</C.butao>
+                <C.butao onClick={gotoLoginPage}>Fazer Login</C.butao>
         </div>
     )
 }
