@@ -1,0 +1,15 @@
+{
+  "name": "aprofundamento-typescript",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "tsc & node build/index1.js",
+    "go": "tsc & node build/index2.js",
+    "play": "tsc & node build/index3.js",
+    "lets": "tsc & node build/index4.js",
+    "vai": "tsc & node build/index5.js"
+  },
+  "author": "rafael santos",
+  "license": "ISC"
+}
