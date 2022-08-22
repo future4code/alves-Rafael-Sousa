@@ -1,6 +1,6 @@
 import express, { Request, Response } from "express";
 import cors from "cors";
-import { cadastro, dados } from "./data";
+import { accounts } from "./accounts";
 
 const app = express();
 
@@ -11,32 +11,43 @@ app.listen(3003, () => {
     console.log("Server is running in http://localhost:3003")
 });
 
-app.get("/users", (req: Request, res: Response)=>{
-    res.send(cadastro)
-})
+app.post("/users/create", (req:Request, res:Response)=>{
+    try {
+        const {name, cpf, birthAsstring}= req.body
+        
+        const {day, month, year} =birthAsstring.split("/")
+        const birth: Date = new Date(`${year} - ${month} - ${day}`)
+        
+        const ageMilisseconds: number = Date.now() - birth.getTime()
+        
+        const ageInYears:number = ageMilisseconds / 1000 / 60 / 60 / 24 / 365
 
-app.post("/users", (req: Request, res: Response)=>{
-
-   try {
-    const {name, birth, age, email, cpf} = req.body
-    
-        if(age <= 17 ){
-            res.statusCode = 400
-            throw new Error ("você ainda não é maior de idade")
+        if(ageInYears < 18){
+            res.statusCode = 406
+            throw new Error ("Você não possui mais que 18 anos")
         }
        
-       const newUsers:dados={
-           name,
-           cpf,
-           email,
-           age,
-           birth
+        
+        accounts.push({
+            name,
+            cpf,
+            birth,
+            balance: 0,
+            extrato: []
+        })
+        res.status(201).send("Conta criada com sucesso!")
+    } catch (error:any) {
+        res.send(error.message)
+    }
+})
+app.get("/users/all",(req:Request, res:Response)=>{
+    try {
+        if(!accounts.length){
+            res.statusCode = 404
+            throw new Error ("Nenhuma conta foi encontrada")
         }
-        cadastro.push(newUsers)
-    res.status(201).send("usuario criado com sucesso")
-    
-   } catch (error:any) {
-    res.status(res.statusCode).send({message: error.message})
-   }
-
+        res.status(200).send(accounts)
+    } catch (error:any) {
+        res.send(error.message)
+    }
 })
