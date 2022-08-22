@@ -1,0 +1,58 @@
+
+//exercício 1
+
+*a) Nesta tabela, utilizamos o `FLOAT` para declarar o salário, 
+porque esta é uma forma de representar um número não inteiro em uma tabela. 
+Explique os demais comandos que estão nessa query.*
+
+Varchar (x) representa o valor de x caracteres string que o usuario pode usar.
+ DATE - representa uma data (YYY-MM-DD)
+ PRIMARY KEY - KEY ÚNICA, automaticamente UNIQUE e automaticamente não pode-se NOT NULL.
+
+*b) O comando `SHOW` é bem útil para nos prover informações sobre bancos, tabelas, e mais.
+ Utilize os comandos: `SHOW DATABASES` e `SHOW TABLES`. Explique os resultados.*
+
+Show DATABASES vai mostrar as informações do meu banco de dados.
+
+show TABLES pelo que entendi mostra as minhas tabelas exemplo se tenho duas tabelas ele ira 
+mostrar as duas.
+
+
+*c) O comando `DESCRIBE` pode ser usado para ver estrutura de uma tabela.
+ Utilize o comando  `DESCRIBE Actor` e explique os resultados.*
+
+ DESCRIBE ira descrever os valores padrão que pode ser ultilizada na tabela ex: Varchar(255).
+
+
+ //exercício 2
+a) ja foi feita no SQL
+
+b) *Escreva uma query que tente adicionar um outro elemento a tabela com o mesmo 
+ id do item anterior `002`. Isso gerará um erro. Anote a mensagem de erro, 
+ traduza (pode usar o Google Tradutor diretamente) e explique porque esse erro aconteceu.*
+
+ deu esse erro porque o ID é um valor UNIQUE e não podemos repitilo.
+
+c) apontou um erro pois os valores do parametro não foram passados corretamente faltou o genero e data de nascimento.
+
+d) apontou um erro dentro da logica para passar os valores pois foi esquecido de passar o valor do nome.
+
+
+e) erro na hora de passar a data pois precisava de aspas foi oq eu reparei porém o por que de colocar as aspas em um numero eu não entendi muito bem.
+
+
+// exercício 3
+
+c) deu valor null em todas os parametros da tabela 
+
+e) Error Code: 1054. Unknown column 'nome' in 'field list'
+   Código de erro: 1054. Coluna desconhecida 'nome' na 'lista de campos'
+
+   resumindo em vez de colocar o parametro " name " colocaram " nome "
+
+   // exercício 4
+
+   a) *Explique com as suas palavras a query acima*
+   selecione de Ator, onde nome com A% ou nome com J% tenham um  salário maior que 300 mil reais,
+
+   
