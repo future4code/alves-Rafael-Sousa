@@ -1,3 +1,4 @@
+// Primeira parte da atividade - 22/08/2022
 
 //exercício 1
 
@@ -56,3 +57,4 @@ e) Error Code: 1054. Unknown column 'nome' in 'field list'
    selecione de Ator, onde nome com A% ou nome com J% tenham um  salário maior que 300 mil reais,
 
    
+// segunda parte da atividade - 23/08/20022

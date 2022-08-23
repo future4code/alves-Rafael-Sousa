@@ -75,4 +75,49 @@ SELECT * FROM movie
 WHERE lançamento < "2022-08-22" AND 
       (titulo LIKE "%A%" OR
       sinopse LIKE "%i%") AND avaliação > 7;
+      
+ alter table movie add playing_limit_date  date;   
+ 
+ ALTER TABLE movie CHANGE avaliação rating FLOAT;
+ 
+update movie
+set
+playing_limit_date = "2020-12-31"
+where id = "001";
+
+ delete from movie where id = "001";
+ 
+ update movie
+ set 
+ sinopse =" O diretor Carl Denham e sua equipe embarcam em uma viagem de Nova York até uma ilha misteriosa para as filmagens de um novo longa. Na expedição, estão o dramaturgo Jack Driscoll e a atriz Ann Darrow, que é raptada por um gorila gigantesco depois que a equipe desembarca no local. Enquanto procuram por Ann, o grupo se depara com dinossauros e outras criaturas pré-históricas incríveis, assustadoras e perigosas"
+ where id ="001";
+ 
+ select count(*) from movie where rating > 7.5;
+ 
+ select avg(rating) from movie ;
+ 
+ select count(*) from movie where playing_limit_date > curdate();
+ 
+ select count(*) from movie where lançamento > curdate();
+ 
+ select max(rating) from movie;
+ 
+ select min(rating) from movie;
+ 
+ select* from movie 
+ order by titulo;
+ 
+ select* from movie 
+ order by titulo 
+ limit 5;
+ 
+ select * from movie
+ where playing_limit_date > curdate()
+ order by lançamento
+ limit 3;
+ 
+ select * from movie
+ order by rating desc
+ limit 3
+ 
  
