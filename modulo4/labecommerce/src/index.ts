@@ -1,20 +1,25 @@
-import express from "express"
-import cors from "cors"
-import { AddressInfo } from "net"
-import CreateUsers from "./endpoints/createuser"
-export const app = express()
+import { app } from "./app"
+import { createUser } from "./enpoints/createUser"
+import { createProduct } from "./enpoints/createProduct"
+import { createPurchases } from "./enpoints/createPurchases"
+import { getAllUsers } from "./enpoints/getAllUsers"
+import { getAllProducts } from "./enpoints/getAllProducts"
+import { getPurchasesByUserId } from "./enpoints/getPurchasesByUserId"
 
-app.use(express.json())
-app.use(cors())
+
+app.get("/users", getAllUsers)
+
+app.get("/users/:userId/purchases", getPurchasesByUserId)
+
+app.post("/users", createUser)
+
+app.get("/products", getAllProducts)
+
+app.post("/products", createProduct)
+
+app.post("/purchases", createPurchases)
 
 
-const server = app.listen(process.env.PORT || 3003, () => {
-    if (server) {
-       const address = server.address() as AddressInfo;
-       console.log(`Server is running in http://localhost:${address.port}`);
-    } else {
-       console.error(`Failure upon starting server.`);
-    }
- })
 
- app.post("/user",CreateUsers )
+
+
