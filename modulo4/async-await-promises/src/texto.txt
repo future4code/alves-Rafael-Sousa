@@ -1,0 +1,33 @@
+// exercicio 1
+
+a) método get 
+
+b) indicamos (any)
+
+// exercicio 2
+
+a) não sei oq muda porem gosto de usar arrow function acho mais legivel 
+
+//exercicio 3
+
+a) no meu console não apontou nenhum erro mas acredito que depende do que você pretende fazer ao utilizar uma tipagem.
+
+b) não sei o por que do map no promise<any>.
+
+// exercicio 4
+
+a) metodo post pois iremos criar uma nova Notica o put seria valido mas a função principal dele é 
+alterar algo.
+
+// exercicio 6
+
+a) Por exemplo, vamos supor que você tenha dez promises 
+(operação assíncrona para realizar uma chamada à rede ou uma conexão com um banco de dados).
+ Você precisa saber quando todas as promises forem resolvidas ou terá de esperar até que 
+ todas elas sejam resolvidas. Desse modo, você passa todas as promises para Promise.all. Depois,
+  a própria Promise.all vira uma promise, que será resolvida quando todas
+ as 10 promises forem resolvidas ou quando qualquer uma delas for rejeitada com um erro.
+
+
+ b) resumindo a promise.all ela vira todas a promise e sera executado depois que as demais promises forem resolvidas
+ ou qualquer uma apontar um erro.
