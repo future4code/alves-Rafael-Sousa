@@ -1,0 +1,13 @@
+//exercicio 1
+ 
+a) ela é para referencia da ligação de uma tabela para outra.
+
+c) deu um erro na foreign key pois o id não é o mesmo da primary key
+
+e) não da pois como deletamos a coluna rating não teria como mudar uma avaliação.
+
+// exercicio 2
+
+a) usamos o comando para criar a tabela estabelecemos duas colunas nela movie_id e actor_id,
+depois passamos o foreign key para fazer a ligação entre as tabelas.
+
