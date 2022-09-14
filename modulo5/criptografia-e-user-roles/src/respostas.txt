@@ -1,0 +1,9 @@
+exercicio 1
+
+A)      O salt é uma das vantagens do BCrypt, pois acrescenta aleatoriamente sequências de caracteres
+    a senha, projetando resultados criptográficos complexos e aumentando a segurança
+    contra ataques de força bruta, como o rainbow tables, ou seja,
+    um hash sempre será diferente, mesmo que a senha seja igual.
+        Ja a outra vantagem do BCrypt é a possibilidade de alterar valores do saltRounds 
+    (relacionado a custos), onde quanto maior o número fornecido, 
+    mais lento será o processamento para calcular o hash associado a senha.
