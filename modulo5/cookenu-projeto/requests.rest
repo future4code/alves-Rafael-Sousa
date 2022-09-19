@@ -1,0 +1,57 @@
+# @name signup
+
+POST http://localhost:3003/signup
+Content-Type:application/json
+
+{
+    "name": "Joao",
+    "email": "Joao@maneger.com",
+    "password": "1234546"
+}
+
+###
+
+# @name login
+
+POST http://localhost:3003/login
+Content-Type:application/json
+{
+    "email": "Joao@maneger.com",
+    "password": "1234546"
+}
+
+
+###
+# @token = {{login.response.body.token}} 
+
+@token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjAzOTNmNDJlLWRlMTUtNDg0Yy1iNDZhLWE1Mzc5OGM4MTQ3NSIsImlhdCI6MTY2MzE5NjI4NywiZXhwIjoxNjYzNjI4Mjg3fQ.xs8U_9mUgemVX5p_srsK_FzICfGQtEsU9ZhPSl0WWnc
+
+GET http://localhost:3003/user/profile
+Authorization: {{token}}
+
+@id = 0393f42e-de15-484c-b46a-a53798c81475
+
+
+###
+
+GET http://localhost:3003/user/{{id}}
+Authorization:{{token}}
+
+###
+
+POST http://localhost:3003/recipe 
+Content-Type: application/json 
+Authorization: {{token}}
+
+{
+"title": "Sorvete" , 
+"description": "Maça verde com menta"
+}
+
+###
+@id = 8025baaa-3637-472b-a036-ddb26f95dc74
+
+GET http://localhost:3003/recipe/{{id}}
+Content-Type: application/json 
+Authorization:{{token}}
+
